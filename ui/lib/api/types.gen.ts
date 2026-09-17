@@ -15,7 +15,6 @@ export type Agent = {
 export type AgentSource = {
     image?: string;
     protocol?: 'A2A' | 'HTTP' | 'OpenAIResponses';
-    repository?: Repository;
 };
 
 export type AgentSpec = {
@@ -379,7 +378,6 @@ export type McpServerOAuth = {
 
 export type McpServerSource = {
     package?: McpPackage;
-    repository?: Repository;
 };
 
 export type McpServerSpec = {
@@ -734,7 +732,6 @@ export type ServerDetail = {
     name: string;
     packages?: Array<ServerPackage> | null;
     remotes?: Array<ServerTransport> | null;
-    repository?: ServerRepository;
     title?: string;
     version: string;
     websiteUrl?: string;
@@ -762,13 +759,6 @@ export type ServerPackage = {
     runtimeHint?: string;
     transport: ServerTransport;
     version: string;
-};
-
-export type ServerRepository = {
-    id?: string;
-    source?: string;
-    subfolder?: string;
-    url: string;
 };
 
 export type ServerResponse = {
